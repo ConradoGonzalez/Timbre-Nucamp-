@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Timbre: Find Your Sound</title>
+</head>
+<body>
+
+    <!--Navbar-->
+
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <a class="navbar-brand" href="login.html"><i class="fa fa-lg fa-headphones" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="favorites.html"><i class="fa fa-lg fa-heart" aria-hidden="true"></i></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a onclick="myFunction()" class="nav-link" href="#"><i class="fa fa-lg fa-sign-out" aria-hidden="true"></i></a>
+                </li> -->
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">User</a>
+                    <a class="dropdown-item" href="#">Album</a>
+                    <a class="dropdown-item" href="#">Year</a>
+                    <a class="dropdown-item" href="#">Genre</a>
+                </div>
+            </div>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <span class="nav-link ml-auto">
+            <a role="button btn-outline" href="#" data-toggle="modal" data-target="#logoutModal">
+                <i class="fa fa-lg fa-sign-out"></i>
+            </a>
+        </span>
+    </nav>
+
+    <!--Modal Logout Prompt Code-->
+
+    <div id="logoutModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Are you sure you want to Logout?</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-sm ml-1">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Logo Title/Submit Form-->
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center align-self-center">
+                    <i class="fa fa-5x fa-headphones" aria-hidden="true"></i>
+                    <h1>Timbre</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row row-content">
+                        <div class="col-12">
+                            <h2>Create New Post</h2>
+                            </br>
+                            <hr />
+                            </br>
+                        </div>
+                        <div class="col-md-10">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="artist" class="col-md-2 col-form-label">Artist</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" id="artist" name="artist" placeholder="Artist" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="albumTitle" class="col-md-2 col-form-label">Album Title</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" id="albumTitle" name="albumTitle" placeholder="Album Title" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="year" class="col-md-2 col-form-label">Year</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" id="year" name="year" placeholder="Year" />
+                                    </div>
+                                </div>
+                                <!--Dropdown-->
+                                <div class="form-group row">
+                                    <label for="genre" class="col-md-2 col-form-label">Genre</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="genre" name="genre" placeholder="Genre">
+                                            <option>Rock</option>
+                                            <option>Alternative</option>
+                                            <option>Jazz</option>
+                                            <option>Hip Hop</option>
+                                            <option>Classical</option>
+                                            <option>Funk</option>
+                                            <option>Electronic</option>
+                                            <option>Folk</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--Image-->
+
+                                    <div class="form-group row">
+                                      <label for="albumArt" class="col-md-2 col-form-label">Album Art</label>
+                                      <div class="col-md-10">
+                                      <input type="file" class="form-control-file" id="albumArt">
+                                        </div>
+                                    </div>
+
+                                <div class="form-group row">
+                                    <label for="caption" class="col-md-2 col-form-label">Caption</label>
+                                    <div class="col-md-10">
+                                        <textarea class="form-control" id="caption" name="caption" rows="2" placeholder="Caption"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="offset-md-2 col-md-10">
+                                        <button type="submit" class="btn btn-primary">Post!</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

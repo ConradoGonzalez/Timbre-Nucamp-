@@ -27,6 +27,9 @@ h2 {
   margin-left: 4px;
 }
 
+.navbar-toggler {
+  border-color: grey;
+}
 
 
 /* .jumbotron{
